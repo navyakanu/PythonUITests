@@ -1,0 +1,10 @@
+__pycache__
+venv3
+.cache
+*.log
+.DS_Store
+.idea
+*.iml
+*.*.iml
+.idea/workspace.xml
+src/assets
