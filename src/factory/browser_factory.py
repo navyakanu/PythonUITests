@@ -25,6 +25,7 @@ class BrowserFactory:
             "browserName": "chrome",
             "version": "61.0",
             "enableVNC": True,
+            "enableVideo": True
         }
 
         driver = webdriver.Remote(

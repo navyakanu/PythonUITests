@@ -1,0 +1,21 @@
+version: '3'
+services:
+  seleniumhub:
+    image: selenium/hub:latest
+    ports:
+      - 4444:4444
+    environment:
+      - no_proxy=localhost
+
+  chromenode:
+    image: selenium/node-chrome-debug:latest
+    ports:
+      - 5900
+    links:
+      - seleniumhub:hub
+    environment:
+      - no_proxy=localhost
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444

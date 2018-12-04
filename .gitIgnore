@@ -8,3 +8,5 @@ venv3
 *.*.iml
 .idea/workspace.xml
 src/assets
+.talismanignore
+video/*
