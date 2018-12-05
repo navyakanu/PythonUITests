@@ -18,4 +18,5 @@ class TestGoogleHomePageTwo:
              .enter_text_and_search("Github") \
 
     def teardown_method(self):
-        self.driver.quit()
+        if (self.driver != None):
+            self.driver.quit()

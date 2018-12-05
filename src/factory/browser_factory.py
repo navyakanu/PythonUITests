@@ -13,13 +13,14 @@ class BrowserFactory:
 
     __config = ConfigSetup()
 
-    resources_path = os.path.join(FileFactory.root_dir, 'ui_test/utilities/resources/')
+    resources_path = os.path.join(FileFactory.root_dir, 'utilities/resources/')
     chrome_driver_path = resources_path + "chromedriver"
     url = __config.get_base_url()
 
     with_docker = pytest.config.getoption("withdocker")
 
     if (eval(with_docker)):
+
 
         capabilities = {
             "browserName": "chrome",

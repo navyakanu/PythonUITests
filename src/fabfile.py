@@ -24,6 +24,6 @@ def setup_env(environment):
 @task()
 def execute_test(test_type, with_docker):
     setup_env("local")
-    execution_command = "py.test -v -m {0} {1} -d --tx 2*popen --withdocker={2}".format(
+    execution_command = "py.test --json=reports/report.json --html=reports/report.html -v -m {0} {1} -d --tx 3*popen --withdocker={2}".format(
         test_type,env.ROOT_DIR,with_docker)
     local(execution_command)

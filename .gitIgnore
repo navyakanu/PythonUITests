@@ -4,9 +4,8 @@ venv3
 *.log
 .DS_Store
 .idea
-*.iml
 *.*.iml
-.idea/workspace.xml
 src/assets
 .talismanignore
 video/*
+reports/
