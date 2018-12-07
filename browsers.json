@@ -1,9 +1,9 @@
 {
   "firefox": {
-    "default": "latest",
+    "default": "47.0",
     "versions": {
-      "latest": {
-        "image": "selenoid/firefox",
+      "47.0": {
+        "image": "selenoid/vnc:firefox_47.0",
         "port": "4444",
         "path": "/wd/hub",
         "tmpfs": {

@@ -7,3 +7,4 @@ pytest-json
 selenium==3.0.2
 pytest-pep8
 pytest-xdist
+pycco
