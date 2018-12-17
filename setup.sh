@@ -10,22 +10,14 @@ done
 
 test_type=${argument[1]}
 
-with_docker=${argument[2]-False}
+with_docker=True
+docker-compose up --build -d
 
+response=$(curl --write-out %{http_code} --silent --output /dev/null http://localhost:4444/status)
 
-if $with_docker
-then
-    with_docker=True
-    docker-compose up --build -d
+while [ ${response} != "200" ]
+do
+     response=$(curl --write-out %{http_code} --silent --output /dev/null http://localhost:4444/status)
+done
 
-    response=$(curl --write-out %{http_code} --silent --output /dev/null http://localhost:4444/status)
-
-    while [ ${response} != "200" ]
-    do
-        response=$(curl --write-out %{http_code} --silent --output /dev/null http://localhost:4444/status)
-    done
-
-    echo "Grid is Up"
-else
-    with_docker=False
-fi
+echo "Grid is Up"
