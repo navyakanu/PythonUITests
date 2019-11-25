@@ -5,11 +5,7 @@ Sample Application under test:
 
     http://www.google.com
 
-How to run the tests?
-
-    ./run_test.sh --test_type=only 
-    
-    
+  
 What does ./run_test.sh contain and do?
 
 1) Brings up the virtual environment for python3.6
@@ -29,7 +25,16 @@ What does ./run_test.sh contain and do?
 
 5) If you are changing or updating browsers.json, restart docker image for selenoid, otherwise you docker would not recognise the environment
 
+6) Pull the video recorder
+            
 
-
+            docker pull selenoid/video-recorder:latest-release
     
+
+
+How to run the tests?
+
+    ./run_test.sh --test_type=only 
+    
+      
     

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 source "./setup.sh"
 rm -rf video/*
-python3.6 -m venv venv3
+python3.8 -m venv venv3
 source venv3/bin/activate
 cd src
 pycco factory/*.py
